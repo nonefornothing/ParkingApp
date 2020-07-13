@@ -7,7 +7,7 @@ application for parking rental owners
 * [Setup](#setup)
 
 ## General info
-This project is Book Store App with information that use from enum , with input and output from console.
+This project is parking rental owner to organize and calculate automatically customer cost for parking. 
 
 Deesign program :
 1. Application have 4 menu : checkin,checkout,history,exit application.
