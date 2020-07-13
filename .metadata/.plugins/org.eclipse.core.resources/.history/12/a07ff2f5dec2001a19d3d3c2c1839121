@@ -12,9 +12,9 @@ public class CheckinKendaraan {
 
 	static Date date = new Date();
 
-	static Scanner userInput = new Scanner(System.in);
-	static CheckinKendaraan checkin = new CheckinKendaraan();
-	static ArrayList<String[]> listCheckIn = new ArrayList<String[]>();
+	public static Scanner userInput = new Scanner(System.in);
+	public static CheckinKendaraan checkin = new CheckinKendaraan();
+	public static ArrayList<String[]> listCheckIn = new ArrayList<String[]>();
 
 	public void showCheckin() {
 		checkin.tampilMenuCheckin();
@@ -136,7 +136,7 @@ public class CheckinKendaraan {
 				cekin();
 			}
 
-			if ((platTengah >= 1111) && (platTengah <= 9999)) {
+			if ((platTengah >= 1000) && (platTengah <= 9999)) {
 				userInput.nextLine();
 				System.out.print("masukan 1-3 digit huruf: ");
 				platAkhir = userInput.nextLine();

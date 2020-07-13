@@ -160,11 +160,11 @@ public class CheckinKendaraan {
 	public void validasiCheckin() {
 
 		if (listCheckIn.size() == 0) {
-//			System.out.println("kosong");
+			//System.out.println("kosong");
 		} else {
 			for (int i = 0; i < listCheckIn.size(); i++) {
-				if (listCheckIn.get(i)[2].equalsIgnoreCase(String.valueOf(platTengah))) {
-					if (listCheckIn.get(i)[3].equalsIgnoreCase(String.valueOf(platAkhir))) {
+				if (listCheckIn.get(i)[2].equals(String.valueOf(platTengah))) {
+					if (listCheckIn.get(i)[3].equals(String.valueOf(platAkhir))) {
 						System.out.println("Plat nomor ini sudah parkir hari ini sebelumnya");
 						kembaliKeMenu();
 					}

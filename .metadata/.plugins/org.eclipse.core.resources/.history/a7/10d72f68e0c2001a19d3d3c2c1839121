@@ -1,4 +1,4 @@
-
+package local.BotInc.ParkirApp;
 
 import java.util.Scanner;
 
@@ -6,8 +6,8 @@ public class LaporanKendaraan {
 	
 	Scanner userInput = new Scanner(System.in);
 	
-	static CheckinKendaraan checkin = new CheckinKendaraan();
-	static CheckoutKendaraan checkout = new CheckoutKendaraan();
+	public static CheckinKendaraan checkin = new CheckinKendaraan();
+	public static CheckoutKendaraan checkout = new CheckoutKendaraan();
 	
 	static String masukanString;
 	
@@ -34,7 +34,7 @@ public class LaporanKendaraan {
 	}
 	
 	public void kembaliKeMenu() {
-		System.out.println("Kembali ke menu uatama ? (y/n)");
+		System.out.println("Kembali ke menu utama ? (y/n)");
 		System.out.print(": ");
 		masukanString = userInput.nextLine();
 		if(masukanString.equals("y") || masukanString.equals("Y")) {

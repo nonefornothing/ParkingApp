@@ -21,7 +21,7 @@ public class LaporanKendaraan {
 				System.out.print("\n" + checkin.listCheckIn.get(i)[0] + " " + checkin.listCheckIn.get(i)[1] + " " + checkin.listCheckIn.get(i)[2] + " " + checkin.listCheckIn.get(i)[3] + " " + checkin.listCheckIn.get(i)[4] + ":" + checkin.listCheckIn.get(i)[5] + ":" + checkin.listCheckIn.get(i)[6] + " " + checkin.listCheckIn.get(i)[7] + "-" + checkin.listCheckIn.get(i)[8] + "-" + checkin.listCheckIn.get(i)[9]);
 			}
 		}
-		System.out.print("\nnKendaraan Check Out");
+		System.out.print("\nKendaraan Check Out");
 		if(checkout.listCheckout.size() == 0) {
 			System.out.println(" 0");
 		} else {
@@ -34,7 +34,7 @@ public class LaporanKendaraan {
 	}
 	
 	public void kembaliKeMenu() {
-		System.out.println("Kembali ke menu uatama ? (y/n)");
+		System.out.println("\nKembali ke menu utama ? (y/n)");
 		System.out.print(": ");
 		masukanString = userInput.nextLine();
 		if(masukanString.equals("y") || masukanString.equals("Y")) {

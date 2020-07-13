@@ -35,7 +35,7 @@ public class Main {
 			pilihanMenu();
 		}
 		
-		if(masukan == 1 || masukan == 2 || masukan == 3) {
+		if(masukan == 1 || masukan == 2 || masukan == 3 || masukan == 4) {
 			switch (masukan) {
 			case 1:
 				new CheckinKendaraan().showCheckin();
@@ -48,7 +48,7 @@ public class Main {
 			case 3:
 				new LaporanKendaraan().showLaporan();
 				break;
-				
+	
 			case 4:
 				System.out.print("exit");
 				System.exit(0);

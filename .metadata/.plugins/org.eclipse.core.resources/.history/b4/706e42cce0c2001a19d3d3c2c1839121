@@ -1,3 +1,5 @@
+package local.BotInc.ParkirApp;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Date;
@@ -122,7 +124,7 @@ public class CheckoutKendaraan {
 	}
 	
 	public void tampilHarga() {
-		System.out.print("CHECK OUT: " + checkin.listCheckIn.get(ketemuPlatAkhir)[0] + ", " + checkin.listCheckIn.get(ketemuPlatAkhir)[1] + " " + checkin.listCheckIn.get(ketemuPlatAkhir)[2] + " " + checkin.listCheckIn.get(ketemuPlatAkhir)[3] + " ");
+		System.out.print("CHECK In: " + checkin.listCheckIn.get(ketemuPlatAkhir)[0] + ", " + checkin.listCheckIn.get(ketemuPlatAkhir)[1] + " " + checkin.listCheckIn.get(ketemuPlatAkhir)[2] + " " + checkin.listCheckIn.get(ketemuPlatAkhir)[3] + " ");
 		System.out.print(checkin.listCheckIn.get(ketemuPlatAkhir)[4] + ":" + checkin.listCheckIn.get(ketemuPlatAkhir)[5] + ":" + checkin.listCheckIn.get(ketemuPlatAkhir)[6] + " ");
 		System.out.print(checkin.listCheckIn.get(ketemuPlatAkhir)[7] + "-" + checkin.listCheckIn.get(ketemuPlatAkhir)[8] + "-" + checkin.listCheckIn.get(ketemuPlatAkhir)[9]);
 		System.out.println("");

@@ -124,7 +124,7 @@ public class CheckoutKendaraan {
 	}
 	
 	public void tampilHarga() {
-		System.out.print("CHECK OUT: " + checkin.listCheckIn.get(ketemuPlatAkhir)[0] + ", " + checkin.listCheckIn.get(ketemuPlatAkhir)[1] + " " + checkin.listCheckIn.get(ketemuPlatAkhir)[2] + " " + checkin.listCheckIn.get(ketemuPlatAkhir)[3] + " ");
+		System.out.print("CHECK IN: " + checkin.listCheckIn.get(ketemuPlatAkhir)[0] + ", " + checkin.listCheckIn.get(ketemuPlatAkhir)[1] + " " + checkin.listCheckIn.get(ketemuPlatAkhir)[2] + " " + checkin.listCheckIn.get(ketemuPlatAkhir)[3] + " ");
 		System.out.print(checkin.listCheckIn.get(ketemuPlatAkhir)[4] + ":" + checkin.listCheckIn.get(ketemuPlatAkhir)[5] + ":" + checkin.listCheckIn.get(ketemuPlatAkhir)[6] + " ");
 		System.out.print(checkin.listCheckIn.get(ketemuPlatAkhir)[7] + "-" + checkin.listCheckIn.get(ketemuPlatAkhir)[8] + "-" + checkin.listCheckIn.get(ketemuPlatAkhir)[9]);
 		System.out.println("");
@@ -136,7 +136,7 @@ public class CheckoutKendaraan {
 		durasiJam = Integer.parseInt(checkout.listCheckout.get(listCheckout.size()-1)[4]) - Integer.parseInt(checkin.listCheckIn.get(ketemuPlatAkhir)[4]);
 		durasiMenit = Integer.parseInt(checkout.listCheckout.get(listCheckout.size()-1)[5]) - Integer.parseInt(checkin.listCheckIn.get(ketemuPlatAkhir)[5]);
 		DurasiDetik = Integer.parseInt(checkout.listCheckout.get(listCheckout.size()-1)[6]) - Integer.parseInt(checkin.listCheckIn.get(ketemuPlatAkhir)[6]);
-		System.out.print("Total Harga: ");
+		System.out.print("Total Biaya Parkir : ");
 		hitungHarga();
 		kembaliKeMenu();
 	}

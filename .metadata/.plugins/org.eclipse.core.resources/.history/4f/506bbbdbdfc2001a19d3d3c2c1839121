@@ -140,7 +140,7 @@ public class CheckinKendaraan {
 				System.out.print("masukan 1-3 digit huruf: ");
 				platAkhir = userInput.nextLine();
 				if ((platAkhir.length() == 1) || (platAkhir.length() == 2) || (platAkhir.length() == 3)) {
-					System.out.println("Input berhasil..");
+
 				} else {
 					System.out.println("\nHarus memasukan 1-3 huruf!\n");
 					cekin();
@@ -160,7 +160,8 @@ public class CheckinKendaraan {
 	public void validasiCheckin() {
 
 		if (listCheckIn.size() == 0) {
-//			System.out.println("kosong");
+			System.out.println("Input berhasil..");
+			//System.out.println("kosong");
 		} else {
 			for (int i = 0; i < listCheckIn.size(); i++) {
 				if (listCheckIn.get(i)[2].equalsIgnoreCase(String.valueOf(platTengah))) {

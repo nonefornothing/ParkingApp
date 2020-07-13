@@ -1,25 +1,25 @@
+package local.BotInc.ParkirApp;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Date;
 
 public class CheckinKendaraan {
-	
+
 	static Integer masukan, jam, platTengah;
 	static Character platAwal;
 	static String platAkhir, masukanString;
-	
+
 	static Date date = new Date();
-	
-	static Scanner userInput = new Scanner(System.in);
-	static CheckinKendaraan checkin = new CheckinKendaraan();
-	static ArrayList<String[]> listCheckIn = new ArrayList<String[]>();
-	
+
+	public static Scanner userInput = new Scanner(System.in);
+	public static CheckinKendaraan checkin = new CheckinKendaraan();
+	public static ArrayList<String[]> listCheckIn = new ArrayList<String[]>();
+
 	public void showCheckin() {
 		checkin.tampilMenuCheckin();
-		
 	}
-	
+
 	public void tampilMenuCheckin() {
 		System.out.println("==================");
 		System.out.println("1. Checkin Motor");
@@ -29,67 +29,53 @@ public class CheckinKendaraan {
 		System.out.print("masukan pilihan: ");
 		checkin.pilihanCheckin();
 	}
-	
+
 	public static void checkinMotor() {
 		new CheckinKendaraan().cekin();
-		
-		String[] p = {
-				"Motor",
-				String.valueOf(platAwal),
-				String.valueOf(platTengah),
-				String.valueOf(platAkhir),
-				String.valueOf(date.getHours()),
-				String.valueOf(date.getMinutes()),
-				String.valueOf(date.getSeconds()),
-				String.valueOf(date.getYear()+1900),
-				String.valueOf(date.getMonth()),
-				String.valueOf(date.getDate()),	
-		};
+
+		String[] p = { "Motor", String.valueOf(platAwal), String.valueOf(platTengah), String.valueOf(platAkhir),
+				String.valueOf(date.getHours()), String.valueOf(date.getMinutes()), String.valueOf(date.getSeconds()),
+				String.valueOf(date.getYear() + 1900), String.valueOf(date.getMonth()),
+				String.valueOf(date.getDate()), };
 		listCheckIn.add(p);
 		berhasilCheckin();
 	}
-	
+
 	public static void checkinMobil() {
 		new CheckinKendaraan().cekin();
-		
-		String[] p = {
-				"Mobil",
-				String.valueOf(platAwal),
-				String.valueOf(platTengah),
-				String.valueOf(platAkhir),
-				String.valueOf(date.getHours()),
-				String.valueOf(date.getMinutes()),
-				String.valueOf(date.getSeconds()),
-				String.valueOf(date.getYear()+1900),
-				String.valueOf(date.getMonth()),
-				String.valueOf(date.getDate()),	
-		};
+
+		String[] p = { "Mobil", String.valueOf(platAwal), String.valueOf(platTengah), String.valueOf(platAkhir),
+				String.valueOf(date.getHours()), String.valueOf(date.getMinutes()), String.valueOf(date.getSeconds()),
+				String.valueOf(date.getYear() + 1900), String.valueOf(date.getMonth()),
+				String.valueOf(date.getDate()), };
 		listCheckIn.add(p);
 		berhasilCheckin();
 	}
-	
+
 	public static void berhasilCheckin() {
 		System.out.println("============================");
-		System.out.print("Check in " + listCheckIn.get(listCheckIn.size()-1)[0] + " pada: ");
-		System.out.print(listCheckIn.get(listCheckIn.size()-1)[4] + ":" + listCheckIn.get(listCheckIn.size()-1)[5] + ":" +listCheckIn.get(listCheckIn.size()-1)[6]);
-		System.out.println(" " + listCheckIn.get(listCheckIn.size()-1)[7] + "-" + listCheckIn.get(listCheckIn.size()-1)[8] + "-" + listCheckIn.get(listCheckIn.size()-1)[9]);
-		System.out.println("Plat Nomor: " + listCheckIn.get(listCheckIn.size()-1)[1] + " " + listCheckIn.get(listCheckIn.size()-1)[2] + " " + listCheckIn.get(listCheckIn.size()-1)[3]);
+		System.out.print("Check in " + listCheckIn.get(listCheckIn.size() - 1)[0] + " pada: ");
+		System.out.print(listCheckIn.get(listCheckIn.size() - 1)[4] + ":" + listCheckIn.get(listCheckIn.size() - 1)[5]
+				+ ":" + listCheckIn.get(listCheckIn.size() - 1)[6]);
+		System.out.println(" " + listCheckIn.get(listCheckIn.size() - 1)[7] + "-"
+				+ listCheckIn.get(listCheckIn.size() - 1)[8] + "-" + listCheckIn.get(listCheckIn.size() - 1)[9]);
+		System.out.println("Plat Nomor: " + listCheckIn.get(listCheckIn.size() - 1)[1] + " "
+				+ listCheckIn.get(listCheckIn.size() - 1)[2] + " " + listCheckIn.get(listCheckIn.size() - 1)[3]);
 		System.out.println("Status berhasil");
 		System.out.println("============================");
 		checkin.kembaliKeMenu();
 	}
-	
+
 	public static void tampilMenit(Integer masuk) {
-		if(masuk < 10) {
-			System.out.println("0"+masuk);
+		if (masuk < 10) {
+			System.out.println("0" + masuk);
 		} else {
 			System.out.println(masuk);
 		}
 	}
-	
-	
+
 	public void pilihanCheckin() {
-		
+
 		try {
 			masukan = userInput.nextInt();
 		} catch (Exception e) {
@@ -98,8 +84,8 @@ public class CheckinKendaraan {
 			System.out.print("masukan pilihan: ");
 			pilihanCheckin();
 		}
-		
-		if(masukan == 1 || masukan == 2 || masukan ==3) {
+
+		if (masukan == 1 || masukan == 2 || masukan == 3) {
 			switch (masukan) {
 			case 1:
 				checkinMotor();
@@ -108,7 +94,7 @@ public class CheckinKendaraan {
 			case 2:
 				checkinMobil();
 				break;
-			
+
 			case 3:
 				new Main().tampilMenu();
 				break;
@@ -119,29 +105,28 @@ public class CheckinKendaraan {
 			pilihanCheckin();
 		}
 	}
-	
+
 	public void kembaliKeMenu() {
-		System.out.println("Kembali ke menu uatama ? (y/n)");
+		System.out.println("Kembali ke menu utama ? (y/n)");
 		System.out.print(": ");
 		masukanString = userInput.nextLine();
-		if(masukanString.equals("y") || masukanString.equals("Y")) {
+		if (masukanString.equals("y") || masukanString.equals("Y")) {
 			new Main().tampilMenu();
-		} else if (masukanString.equals("n") || masukanString.equals("N")){
+		} else if (masukanString.equals("n") || masukanString.equals("N")) {
 			checkin.tampilMenuCheckin();
 		} else {
 			System.out.println("Input wrong");
 			kembaliKeMenu();
 		}
 	}
-	
+
 	public void cekin() {
 		System.out.println("===============================");
 		System.out.println("(Contoh plat nomor: B 4533 SBA)");
 		System.out.print("Masukan 1 huruf Plat Nomor pertama: ");
 		platAwal = userInput.next().charAt(0);
-		if(platAwal.equals('b') || platAwal.equals('B')) {
+		if (platAwal.equals('b') || platAwal.equals('B')) {
 			System.out.print("Masukan 4 digit angka selanjutnya: ");
-			
 			try {
 				platTengah = userInput.nextInt();
 			} catch (Exception e) {
@@ -149,12 +134,12 @@ public class CheckinKendaraan {
 				userInput.next();
 				cekin();
 			}
-			
-			if((platTengah >= 1111) && (platTengah <= 9999)) {
+
+			if ((platTengah >= 1000) && (platTengah <= 9999)) {
 				userInput.nextLine();
 				System.out.print("masukan 1-3 digit huruf: ");
 				platAkhir = userInput.nextLine();
-				if((platAkhir.length() == 1) || (platAkhir.length() == 2) || (platAkhir.length() == 3)){
+				if ((platAkhir.length() == 1) || (platAkhir.length() == 2) || (platAkhir.length() == 3)) {
 					System.out.println("Input berhasil..");
 				} else {
 					System.out.println("\nHarus memasukan 1-3 huruf!\n");
@@ -168,18 +153,18 @@ public class CheckinKendaraan {
 			System.out.println("\nJenis kendaraan tidak sesuai!\n");
 			cekin();
 		}
-		System.out.println("masuk validasi");
+		//System.out.println("masuk validasi");
 		validasiCheckin();
 	}
-	
+
 	public void validasiCheckin() {
 
-		if(listCheckIn.size() == 0) {
-			System.out.println("kosong");
+		if (listCheckIn.size() == 0) {
+			//System.out.println("kosong");
 		} else {
-			for(int i = 0; i < listCheckIn.size(); i++) {
-				if(listCheckIn.get(i)[2].equals(String.valueOf(platTengah))) {
-					if(listCheckIn.get(i)[3].equals(String.valueOf(platAkhir))) {
+			for (int i = 0; i < listCheckIn.size(); i++) {
+				if (listCheckIn.get(i)[2].equalsIgnoreCase(String.valueOf(platTengah))) {
+					if (listCheckIn.get(i)[3].equalsIgnoreCase(String.valueOf(platAkhir))) {
 						System.out.println("Plat nomor ini sudah parkir hari ini sebelumnya");
 						kembaliKeMenu();
 					}

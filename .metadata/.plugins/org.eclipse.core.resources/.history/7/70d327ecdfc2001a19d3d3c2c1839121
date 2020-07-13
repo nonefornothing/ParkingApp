@@ -160,7 +160,7 @@ public class CheckinKendaraan {
 	public void validasiCheckin() {
 
 		if (listCheckIn.size() == 0) {
-//			System.out.println("kosong");
+			System.out.println("kosong");
 		} else {
 			for (int i = 0; i < listCheckIn.size(); i++) {
 				if (listCheckIn.get(i)[2].equalsIgnoreCase(String.valueOf(platTengah))) {
